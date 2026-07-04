@@ -2,8 +2,6 @@
 
 基于 Linux 多进程/多线程架构的智能家居环境监控系统，纯 C 语言实现。数据路径零动态内存分配，无第三方网络库依赖。
 
-![Web 仪表盘](screenshots/web.png)
-
 ## 系统架构
 
 ```
@@ -117,6 +115,10 @@ chmod +x start.sh stop.sh
 ├── start.sh         # 系统启动脚本
 └── stop.sh          # 系统停止脚本
 ```
+
+## 界面展示
+
+![Web 仪表盘](screenshots/web.png)
 
 ## 关键设计决策
 
