@@ -11,8 +11,7 @@ light_sensor
 smoke_sensor
 *.exe
 
-# Build output
-build_arm/
+
 
 # Database
 *.db

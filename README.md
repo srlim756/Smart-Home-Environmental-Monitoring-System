@@ -1,6 +1,6 @@
 # Smart Home Environmental Monitoring System
 
-基于 Linux 多进程/多线程架构的智能家居环境监控系统，纯 C 语言实现。数据路径零动态内存分配，无第三方网络库依赖，支持 ARM 交叉编译。
+基于 Linux 多进程/多线程架构的智能家居环境监控系统，纯 C 语言实现。数据路径零动态内存分配，无第三方网络库依赖。
 
 ## 系统架构
 
@@ -58,12 +58,6 @@ UDS 和 TCP 共用同一套 `ipc_send`/`ipc_recv` 接口——Unix "一切皆文
 - 预编译语句提升批量写入性能，防止 SQL 注入
 - 两张表：`sensor_log`（时序数据）、`alarm_log`（告警记录）
 
-### 5. ARM 交叉编译
-
-- `make arm` 目标，使用 `arm-linux-gnueabihf-gcc`
-- QEMU 全系统仿真脚本（`scripts/run_arm.sh`），Cortex-A15 环境验证
-- 传感器数据管道和 IPC 抽象层与硬件无关，同一份代码可编译 x86 和 ARM
-
 ### 6. 容错机制
 
 - **自动重连**：传感器检测到连接断开后 1 秒重试
@@ -95,14 +89,6 @@ chmod +x start.sh stop.sh
 ./start_remote.sh <hub_ip> 9090
 ```
 
-### ARM 交叉编译
-
-```bash
-make arm
-# 输出在 build_arm/ 目录
-# 部署到 QEMU 或 ARM 开发板
-```
-
 ## 项目结构
 
 ```
@@ -123,9 +109,9 @@ make arm
 │   ├── light_sensor.c
 │   └── smoke_sensor.c
 ├── webroot/         # 仪表盘前端（纯 HTML/CSS/JS）
-├── scripts/         # QEMU 部署脚本
+├── scripts/         # 工具脚本
 ├── db/              # 数据库 schema 参考
-├── Makefile         # x86 + ARM 交叉编译目标
+├── Makefile         # 构建系统
 ├── start.sh         # 系统启动脚本
 └── stop.sh          # 系统停止脚本
 ```
