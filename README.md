@@ -116,6 +116,10 @@ chmod +x start.sh stop.sh
 └── stop.sh          # 系统停止脚本
 ```
 
+## 界面展示
+
+![Web 仪表盘](screenshots/web.png)
+
 ## 关键设计决策
 
 | 决策 | 理由 |
