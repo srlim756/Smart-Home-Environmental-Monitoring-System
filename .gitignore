@@ -1,0 +1,38 @@
+# Object files
+*.o
+*.obj
+*.ko
+
+# Executables
+smarthome_hub
+temp_sensor
+humidity_sensor
+light_sensor
+smoke_sensor
+*.exe
+
+# Build output
+build_arm/
+
+# Database
+*.db
+*.db-wal
+*.db-shm
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Socket files
+*.sock

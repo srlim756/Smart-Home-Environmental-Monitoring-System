@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智能家居环境监控</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>智能家居环境监控系统</h1>
+        <div id="alarm-banner" class="alarm-banner hidden">告警触发！</div>
+    </header>
+
+    <div class="sensors">
+        <div class="card temp">
+            <h2>温度</h2>
+            <div class="value" id="temp">--</div>
+            <div class="unit">°C</div>
+        </div>
+        <div class="card humi">
+            <h2>湿度</h2>
+            <div class="value" id="humi">--</div>
+            <div class="unit">%</div>
+        </div>
+        <div class="card light">
+            <h2>光照</h2>
+            <div class="value" id="light">--</div>
+            <div class="unit">lux</div>
+        </div>
+        <div class="card smoke">
+            <h2>烟雾</h2>
+            <div class="value" id="smoke">--</div>
+            <div class="unit">ppm</div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="status">
+            <span class="dot" id="status-dot"></span>
+            <span id="status-text">等待数据...</span>
+        </div>
+        <div class="alarm-count">
+            告警记录: <span id="alarm-count">0</span>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
