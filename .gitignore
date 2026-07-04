@@ -22,6 +22,10 @@ smoke_sensor
 logs/
 *.log
 
+# Office temp files
+*.docx
+~$*
+
 # System files
 .DS_Store
 Thumbs.db
